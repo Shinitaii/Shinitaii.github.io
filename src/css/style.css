@@ -125,7 +125,7 @@ ul.no-bullet{
   background-color: #4e4e4e;
 }
 
-.container:hover .overlay{
+.container-photo:hover .overlay{
     opacity: 1;
 }
 
