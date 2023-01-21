@@ -98,6 +98,17 @@ ul.no-bullet{
     z-index: 99;
 }
 
+#btn-warning-note{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: block;
+    background-color: white;
+    border-radius: 100%;
+    transition: 0.3s;
+    z-index: 99;
+}
+
 #about-section, #career-section{
     transition: 0.8s;
 }
@@ -122,6 +133,14 @@ ul.no-bullet{
 
 .footer-button-color, .footer-button:hover{
     color:white;
+}
+
+.floaty{
+    position: fixed;
+    background-color: white;
+    color: black;
+    width: 100px;
+    z-index: 99;
 }
 
 .selector {
