@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: "Open Sans";
+}
+
+p{
+    font-size: 17px;
+}
+
+#particles-js{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background: white;
+    top: 0;
+    z-index: -99;
+}
+
+.nav-items li{
+    display: inline;
+}
+
+.intro{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.nav-buttons{
+    transition: 0.3s;
+}
+
+.nav-buttons:hover{
+    opacity: 0.4;
+}
+
+.nav-buttons, .nav-buttons:hover{
+    color: white;
+}
+
+.white-color{
+    color: white;
+}
+
+.logo-buttons{
+    transition: 0.4s;
+}
+
+.logo-buttons:hover{
+    opacity: 0.6;
+}
+
+.logo-buttons, .logo-buttons:hover{
+   color: black; 
+}
+
+ul.no-bullet{
+    list-style: none;
+}
+
+.underline-animation{
+    position: relative;
+    color:white;
+}
+
+.underline-animation:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.underline-animation:hover:after {
+    transform: scaleX(1);
+    opacity: 0.4;
+    transform-origin: bottom left;
+}
+
+
+.links{
+    white-space: nowrap;
+}
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+    z-index: 99;
+}
+
+#about-section, #career-section{
+    transition: 0.8s;
+}
+
+#btn-back-to-top:hover{
+    background-color: rgb(168, 168, 168);
+}
+
+.photos{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.overlay{
+    position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #4e4e4e;
+}
+
+.container:hover .overlay{
+    opacity: 1;
+}
+
+.text{
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.footer-button{
+    transition: 0.3s;
+}
+
+.footer-button:hover{
+    opacity: 0.6;
+}
+
+.footer-button-color, .footer-button:hover{
+    color:white;
+}
+
+.selector {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
