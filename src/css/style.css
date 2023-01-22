@@ -109,7 +109,7 @@ ul.no-bullet{
     z-index: 99;
 }
 
-#about-section, #career-section{
+#about-section, #career-section, #skill-section, #outside-career-section{
     transition: 0.8s;
 }
 
@@ -149,4 +149,17 @@ ul.no-bullet{
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+}
+
+@media screen and (max-width: 600px){
+    #intro{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    h1{
+        font-size: 25px;
+    }
+    p{
+        font-size: 11px;
+    }
 }

@@ -3,13 +3,19 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
 
 const myButton = document.getElementById("btn-back-to-top");
 const about = document.getElementById("about-section");
+const skill = document.getElementById("skill-section");
 const career = document.getElementById("career-section");
+const outside = document.getElementById("outside-career-section");
 
 window.onscroll = function () {
   scrollConditions(myButton, 110);
-  scrollConditionMiddle(about, 250, 1500);
+  scrollConditionMiddle(about, 250, 850);
+  scrollConditionMiddle(skill, 500, 1500);
   scrollConditions(career, 1250);
+  scrollConditions(outside, 1700);
 };
+
+
 
 function scrollConditions(variable, num1){
   if(document.body.scrollTop > num1 || document.documentElement.scrollTop > num1){
