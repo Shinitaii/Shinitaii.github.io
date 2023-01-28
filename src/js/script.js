@@ -1,12 +1,10 @@
 const myButton = document.getElementById("back-to-top");
 
-myButton.addEventListener("click", backToTop);
-
-function backToTop() {
+myButton.addEventListener("click", function(){
   window.location = "#";
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
-}
+});
 
 window.onscroll = function (){
     scrollConditions(myButton, 20);

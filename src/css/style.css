@@ -5,6 +5,10 @@
     font-family: "Open Sans";
 }
 
+p{
+    font-size: 18px;
+}
+
 hr{
     margin: 10px 0px 10px 0px;
 }
@@ -51,7 +55,7 @@ hr{
     transform-origin: bottom left;
 }
 
-.content, .intro-section, .photo-container, .quote-section, .about-section, .career-section{
+.content, .intro-section, .photo-container, .quote-section, .about-section, .skill-progress, .career-section, .sub-career{
     display: flex;
     justify-content: center;
 }
@@ -69,20 +73,20 @@ hr{
 }
 
 .quote-section{
-    height: 100vh;
+    height: 120vh;
     width: 100%;
-    background-color: black;
-    color: white;
-    box-shadow: 0 0 20px 40px black;
+    color: black;
     z-index: 1;
 }
 
-.about-section{
-    background-color: white;
-    color: black;
+.about-section, .career-section{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    flex-direction: column;
 }
 
-.about-section, .career-section{
+.about-section, .career-section, .skill-progress, .sub-career{
     align-items: top;
 }
 
@@ -96,6 +100,114 @@ hr{
     text-align: center;
 }
 
+.skill h2{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.skill-progress h2{
+    text-align: center;
+}
+
+.language, .framework{
+    margin: 10px 100px 10px 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.language > label ~ progress, .framework > label ~ progress{
+    width: 425px;
+    height: 25px;
+}
+
+.language label, .framework label{
+    font-size: 18px;
+}
+
+.career, .outside{
+    margin: 3%;
+    flex-wrap: wrap;
+}
+
+.career h1, .outside h1{
+    margin: 3px;
+    text-align: center;
+}
+
+.education p{
+    padding-bottom: 20px;
+}
+
+.education, .work{
+    margin: 25px;
+    width: 100%;
+}
+
+.sub-outside{
+    display: flex;
+    flex-direction: row;
+}
+
+.sub-outside > .photo-container > .photo{
+    margin: 50px;
+    padding: 0;
+    width: 420px;
+    height: 400px;
+}
+
+.contact-section{
+    text-align: center;
+}
+
+.contact-section h1{
+    padding-top: 20px;
+}
+
+.contact{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact > a{
+    flex: 50%;
+}
+
+.footer{
+    margin-top: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+}
+
+.tooltip{
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltip-text{
+    visibility: hidden;
+    opacity: 0;
+    width: 200px;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -100px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 99;
+    transition: all 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+
 .photo{
     margin: 100px;
     border-radius: 50%;
@@ -103,6 +215,7 @@ hr{
 
 .social-links{
     color: black;
+    text-decoration: none;
     font-size: 24px;
     transition: 0.7s;
 }
@@ -128,6 +241,7 @@ hr{
     color: black;
     cursor: pointer;
     transition: 0.4s;
+    z-index: 99;
 }
 
 .hidden{
@@ -143,7 +257,7 @@ hr{
     transform: translateX(0);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 920px) {
     .intro-section{
         margin: 0;
     }
@@ -158,7 +272,6 @@ hr{
     }
 
     .quote-section{
-        height: 50vh;
         box-shadow: 0 0 30px 30px black;
     }
 
@@ -166,8 +279,30 @@ hr{
         font-size: 24px;
     }
 
-    .about-section{
+    .skill-progress{
         flex-direction: column;
+    }
+
+    .language > label ~ progress, .framework > label ~ progress{
+        width: 300px;
+        height: 25px;
+    }
+
+    .sub-career{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sub-outside{
+        flex-direction: column;
+    }
+
+    .contact > a{
+        flex: 100%;
+    }
+
+    .contact-section{
+        width: 400px;
     }
 }
 
@@ -184,6 +319,11 @@ hr{
         font-size: 13px;
     }
 
+    .intro-section{
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
     .photo-container .photo{
         margin-top: 30px;
         margin-bottom: 30px;
@@ -192,12 +332,8 @@ hr{
     }
 
     .text-container{
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-    
-    .quote-section{
-        width: 90%;
+        margin-left: 40px;
+        margin-right: 40px;
     }
 
     .quote-section h1{
@@ -206,5 +342,22 @@ hr{
 
     .about-section{
         flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .photo-container{
+        margin-top: 70px;
+        margin-bottom: 70px;
+    }
+    .social-links{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .photo-container{
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 }
