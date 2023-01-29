@@ -109,13 +109,18 @@ hr{
 }
 
 .language, .framework{
-    margin: 10px 100px 10px 100px;
+    padding: 10px 10px;
+    margin: 10px 100px;
     display: flex;
     flex-direction: column;
 }
 
 .language label, .framework label{
     font-size: 18px;
+}
+
+.language progress, .framework progress{
+    width: 100%;
 }
 
 .career, .outside{
@@ -283,6 +288,10 @@ hr{
     .contact > a{
         flex: 100%;
     }
+
+    .hidden{
+        transition: all 1.5s ease;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -328,15 +337,20 @@ hr{
     .nav-item{
         font-size: 15px;
     }
-    .photo-container{
-        margin-top: 70px;
-        margin-bottom: 70px;
-    }
     .social-links{
         font-size: 20px;
     }
     .about-section{
         padding: 0;
+    }
+    .text-container{
+        margin: 30px 15px 15px 15px;
+    }
+    .sub-outside > .photo-container > .photo{
+        margin: 20px;
+    }
+    .hidden{
+        transition: all 1s ease;
     }
 }
 
