@@ -153,6 +153,7 @@ hr{
 }
 
 .contact-section{
+    padding: 10px;
     text-align: center;
 }
 
@@ -239,6 +240,11 @@ hr{
     cursor: pointer;
     transition: 0.4s;
     z-index: 99;
+}
+
+#back-to-top:hover{
+    background-color: lightgray;
+    transition: 0.4s;
 }
 
 .hidden{
