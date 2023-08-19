@@ -1,0 +1,187 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: black;
+}
+
+h1{
+  letter-spacing: 2px;
+}
+
+.wallpaper{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('/res/wallpaper.jpg');
+  background-size: cover;
+  opacity: 0.45;
+  z-index: -1;
+}
+
+.hamburger{
+  margin: 0.5rem;
+  color: white;
+  position: fixed;
+  right: 0;
+  font-size: 2rem;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.hamburger:hover{
+  color: rgb(157, 175, 255);
+  transition: 0.3s ease-in-out;
+}
+
+.menu{
+  position: fixed;
+  transform: translateX(100%);
+  z-index: 1;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+}
+
+.menu-content{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+}
+
+.menu-content > button{
+  margin: 1.25rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.menu-content > button:hover{
+  background-color: white;
+  color: black;
+  transition: 0.3s ease-in-out;
+}
+
+.menu-icon,
+.close-icon {
+  position: relative;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.close-icon {
+  opacity: 0; /* Start with "x" icon hidden */
+}
+
+.content{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.photo-container{
+  margin: 1.85rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-container > img{
+  width: 70%;
+  border-radius: 50%;
+}
+
+.social-link-container{
+  margin-top: 2rem;
+  user-select: none;
+}
+
+.social-links{
+  font-size: 3rem;
+  color: white;
+  transition: 0.2s ease-in-out;
+}
+
+.social-links:hover{
+  color: rgb(157, 175, 255);
+  transition: 0.2s ease-in-out;
+}
+
+.text-container{
+  color: white;
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+footer > p{
+  opacity: 1;
+  margin: 0.2rem 1rem;
+}
+
+footer > p > a{
+  color: gray;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+footer > p > a:hover{
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+
+#home, #about{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#home.active, #about.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#about{
+  flex-direction: row;
+  align-items: normal;
+  flex: 0 0 50%;
+}
+
+.about-part, .skill-part, .education-part, .project-part{
+  margin: 0.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.about-part > h1, .skill-part > h1, .education-part > h1, .project-part > h1{
+  padding: 1rem;
+}
+
+.about-part > p, .skill-part > p, .education-part > p, .project-part > p{
+  padding: 0.75rem;
+  font-size: 1rem;
+}

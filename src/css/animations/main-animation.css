@@ -1,0 +1,86 @@
+.wallpaper-appear{
+    opacity: 0;
+    animation: wallpaperAppear 1s forwards;
+}
+
+@keyframes wallpaperAppear {
+    0% { opacity: 0; }
+    100% { opacity: 0.45; }
+}
+
+.hamburger-appear{
+    opacity: 0;
+    pointer-events: none;
+    animation: hamburgerAppear 0.5s forwards;
+}
+
+@keyframes hamburgerAppear {
+    0% { opacity: 0; }
+    100% { opacity: 1; pointer-events: auto; }
+}
+
+.photo-appear{
+    opacity: 0;
+    filter: blur(10px);
+    animation: photoAppear 0.5s forwards
+}
+
+@keyframes photoAppear {
+    0% { opacity: 0; }
+    100% { filter: blur(0); opacity: 1; }
+}
+
+.social-link-animation{
+    opacity: 0;
+    pointer-events: none;
+    animation: linkAppear 0.5s forwards;
+}
+
+@keyframes linkAppear {
+    0% { opacity: 0; }
+    100% { opacity: 1; pointer-events: auto; }
+}
+
+.social-link-appear{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.social-link-disappear{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.type-line{
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.typewriting{
+    animation: typewriter 0.5s steps(19) 1s 1 normal both
+}
+
+.typewriting-short{
+    animation: typewriter-short 0.5s steps(20) 1s 1 normal both
+}
+
+@keyframes typewriter {
+    from{ width: 0; }
+    to{ width: 100%; }
+}
+
+@keyframes typewriter-short {
+    from { width: 0; }
+    to { width: 88%; }
+}
+
+.footer-appear{
+    transform: translateX(-100%);
+    animation: footerAppear 0.5s forwards;
+}
+
+@keyframes footerAppear {
+    100% {transform: translateX(0);}
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Shinitaii</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="/res/shinitaii.ico">
+        <link rel="stylesheet" href="src/css/styles/main-style.css">
+        <link rel="stylesheet" href="src/css/animations/main-animation.css">
+    </head>
+    <body>
+        <div class="wallpaper wallpaper-appear" style="animation-delay: 3.5s"></div>
+        <button type="button" id="hamburger" class="hamburger hamburger-appear" onclick="openMenu()" style="animation-delay: 3.5s;">
+            <span><i class="fa-solid fa-bars menu-icon"></i></span>
+            <span><i class="fa-solid fa-x close-icon"></i></span>
+        </button>
+        <div id="menu" class="menu">
+            <div class="menu-content">
+                <button type="button" onclick="switchToHome()">Home</button>
+                <button type="button" onclick="switchToAbout()">About</button>
+            </div>
+        </div>
+        <!-- Content -->
+        <div class="content active" id="home">
+            <div class="photo-container">
+                <img class="photo-appear" style="animation-delay: 3s;" src="res/richmond-photo.jpg" alt="">
+                <div class="social-link-container">
+                    <a class="social-links social-link-animation" style="animation-delay: 4.5s" href="https://github.com/Shinitaii"><i class="fa fa-github"></i></a>
+                    <a class="social-links social-link-animation" style="animation-delay: 4.6s" href="https://www.linkedin.com/in/richmond-glenn-viloria-711867279/"><i class="fa fa-linkedin-square"></i></a>
+                    <a class="social-links social-link-animation" style="animation-delay: 4.7s" href="https://shinitaii.itch.io"><i class="fab fa-itch-io"></i></a>
+                    <a class="social-links social-link-animation" style="animation-delay: 4.8s" href="mailto:rgviloria1@gmail.com"><i class="fa fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="text-container">
+                <h1 class="type-line typewriting-short">Hi. I'm Richmond.</h1>
+                <h1 class="type-line typewriting" style="animation-delay: 2s">Welcome to my page.</h1>
+            </div>
+        </div>
+        <div class="content" id="about">
+            <div class="about-container">
+                <div class="about-part">
+                    <h1>About</h1>
+                    <p>I am an aspiring software developer.</p>
+                    <p>Fueled to feedback and constructive criticism.</p>
+                    <p>Constant momentum with every task needed for efficiency.</p>
+                    <p>Extreme problem-solving skills to get the job done.</p>
+                </div>
+                <div class="skill-part">
+                    <h1>Skills</h1>
+                    <p>Java - Proficient. Develop native Swing applications.</p>
+                    <p>C# - Skilled. Able to understand the concepts.</p>
+                    <p>Python - Novice. Able to understand the fundamentals.</p>
+                </div>
+            </div>
+            <div class="work-container">
+                <div class="education-part">
+                    <h1>Education</h1>
+                    <p>I am currently studying at the University of Makati.</p>
+                    <p>I took the course of Computer Science.</p>
+                </div>
+                <div class="project-part">
+                    <h1>Projects</h1>
+                    <p>Online Attendance System</p>
+                    <p> - Created in 2022 using Java</p>
+                    <p> - With Swing libraries and Eclipse's Window Builder</p>
+                    <p>Gym Management System</p>
+                    <p> - Created in 2023 using Java</p>
+                    <p> - With Swing libraries.</p>
+                </div>
+            </div>
+        </div>   
+        <!-- Footer -->
+        <footer>
+            <p class="footer-appear" style="animation-delay: 4s">Wallpaper by: <a href="https://www.deviantart.com/seerlight"><strong>Seerlight</strong></a></p>
+            <p class="footer-appear" style="animation-delay: 4s"><strong>© 2022-2023. All Rights Reserved.</strong></p>
+        </footer>
+        <script src="src/js/menu.js" async defer></script>
+        <script src="src/js/section.js" async defer></script>
+        <script src="https://kit.fontawesome.com/4e7116f3ec.js" crossorigin="anonymous"></script>
+    </body>
+</html>
