@@ -1,0 +1,46 @@
+@media screen and (max-width: 480px) {
+    h1{
+        font-size: 1rem;
+    }
+
+    p{
+        font-size: 0.85rem;
+    }
+
+    .photo-container > img{
+        width: 60%;
+    }
+
+    .hamburger{
+        margin: 0.5rem 0rem;
+        font-size: 0.25rem;
+    }
+
+    .menu-content > button{
+        margin: 0.75rem;
+        font-size: 1rem;
+    }
+
+    .social-links{
+        font-size: 2rem;
+    }
+
+    .about-part, .skill-part, .education-part, .project-part{
+        margin: 0.75rem;
+    }
+
+    .about-part > p, .skill-part > p, .education-part > p, .project-part > p{
+        padding: 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    .project-part{
+        margin-bottom: 3rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #about{
+        flex-direction: column;
+    }
+}
